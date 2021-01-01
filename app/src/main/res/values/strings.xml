@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Car</string>
+    <string name="button_addCar">Add a car</string>
+    <string name="hint_carTitle">Car title</string>
+    <string name="hint_carDescription">Description </string>
+    <string name="title_activity_car_list">CarListActivity</string>
+    <string name="menu_addCar">Add</string>
+    <string name="menu_cancelCar">Cancel</string>
+</resources>
