@@ -1,18 +1,19 @@
 <resources>
-    <string name="app_name">MMW cars</string>
+    <string name="app_name"><big><font face="serif">MMW cars</font></big></string>
     <string name="button_addCar">Add a car</string>
     <string name="hint_carMake">Make</string>
     <string name="hint_carModel">Model </string>
     <string name="hint_carYear">Year of manufacture </string>
     <string name="title_activity_car_list">CarListActivity</string>
     <string name="menu_addCar">Add</string>
-    <string name="menu_cancelCar">Cancel</string>
-    <string name="menu_deleteCar">Delete</string>
-    <string name="enter_car_make"> Please enter the car Title </string>
-    <string name="save_car"> Save a new car </string>
+    <string name="menu_cancelCar"><big><font face="serif">Cancel</font></big></string>
+    <string name="menu_deleteCar"><big><font face="serif">Delete</font></big></string>
+    <string name="enter_car_make"> Please enter make </string>
+    <string name="save_car"> Save car </string>
     <string name="button_addImage"> Add Image </string>
-    <string name="select_car_image">Select a car image</string>
-    <string name="change_car_image">Change a car image</string>
+    <string name="select_car_image">Select car image</string>
+    <string name="change_car_image">Change car image</string>
     <string name="button_location">Office Location</string>
     <string name="title_activity_maps">Map</string>
+    <string name="add"><big><font face="serif">Add</font></big></string>
 </resources>
