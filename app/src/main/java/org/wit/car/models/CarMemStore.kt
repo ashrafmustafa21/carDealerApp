@@ -26,10 +26,18 @@ class CarMemStore : CarStore, AnkoLogger {
     override fun update(car: CarModel) {
         var foundCar: CarModel? = cars.find { p -> p.id == car.id }
         if (foundCar != null) {
-            foundCar.title = car.title
-            foundCar.description = car.description
-            logAll()
+            foundCar.make = car.make
+            foundCar.model = car.model
+            foundCar.image = car.image
+            foundCar.lat = car.lat
+            foundCar.lng = car.lng
+            foundCar.zoom = car.zoom
+            logAll();
         }
+    }
+
+    override fun delete(car: CarModel) {
+        cars.remove(car)
     }
 
     //  log all cars list, this to be called whenever a new car is added

@@ -1,5 +1,6 @@
 package org.wit.car.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
@@ -26,7 +27,7 @@ class CarListActivity : AppCompatActivity(), CarListener {
 
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
-        recyclerView.adapter = CarAdapter(app.cars.findAll(), this)
+        loadCars()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -45,5 +46,20 @@ class CarListActivity : AppCompatActivity(), CarListener {
     // Pass a selected car when starting an activity
     override fun onCarClick(car: CarModel) {
         startActivityForResult(intentFor<CarActivity>().putExtra("car_edit", car), 0)
+    }
+
+    //Display the edit result
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        loadCars()
+        super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    private fun loadCars() {
+        showCars(app.cars.findAll())
+    }
+
+    fun showCars (cars: List<CarModel>) {
+        recyclerView.adapter = CarAdapter(cars, this)
+        recyclerView.adapter?.notifyDataSetChanged()
     }
 }
